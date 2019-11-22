@@ -13,7 +13,68 @@
         </p>
     </header>
     <main>
-        <form action="#" id="survey-form">
+        <form class="survey-form" action="#">
+            <p>
+                <legend>What is your sex?</legend>
+                <label><input type="radio" name="sex" required value="M"> M </label>
+                <label> <input type="radio" name="sex" required value="V"> V </label>
+                <label> <input type="radio" name="sex" required value="X"> X </label>
+            </p>
+            <p>
+                <label>Name
+                <input type="text" name="name" required id="name">
+                </label>
+            </p>
+
+            <p>
+                <label>Email 
+                <input type="email" name="email" id="email">
+                </label>
+            </p>
+
+            <p>
+                <label>Age (between 18 and 55)
+                <input type="number" name="age" id="age" min="18" max="55" pattern="\d+">
+                </label>
+            </p>
+
+            <div>
+                <legend>What do you like most of my work? (More answers are possible)</legend>
+                <div><label class="choice"> <input type="checkbox" name="extras" value="baby"> Logo Design </label></div>
+                <div><label class="choice"> <input type="checkbox" name="extras" value="wheelchair"> Web Design </label></div>
+                <div><label class="choice"> <input type="checkbox" name="extras" value="tip"> All </label></div>
+            </div>
+
+            <p>
+                <label>If you were to be an animal, you'd be ... 
+                <select id="pickup_place" name="pickup_place">
+                <option value="" selected="selected">Select One</option>
+                <option value="office" >Taxi Office</option>
+                <option value="town_hall" >Town Hall</option>
+                <option value="telepathy" >We'll Guess!</option>
+                </select>
+                </label>
+            </p>
+
+            <p>
+                <label>Dropoff Place
+                <input type="text" name="dropoff_place" required list="destinations">
+                </label>
+
+                <datalist id="destinations">
+                <option value="Airport">
+                <option value="Beach">
+                <option value="Fred Flinstone's House">
+                </datalist>
+            </p>
+
+            <p>
+                <label>Special Instructions
+                <textarea name="comments" maxlength="500"></textarea>
+                </label>
+            </p>
+
+            <p><button>Submit Booking</button></p>
 
         </form>
     </main>
