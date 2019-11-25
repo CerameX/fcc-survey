@@ -3,6 +3,8 @@
 
 <head>
     <title>Survey</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -21,14 +23,14 @@
                 <label> <input type="radio" name="sex" required value="X"> X </label>
             </p>
             <p>
-                <label>Name
-                <input type="text" name="name" required id="name">
+                <label for="name">Name
+                <input type="text" name="name" required id="name" placeholder="Your Name">
                 </label>
             </p>
 
             <p>
-                <label>Email 
-                <input type="email" name="email" id="email">
+                <label for="mail">Email 
+                <input type="email" name="email" id="email" placeholder="your-mail@mail.com">
                 </label>
             </p>
 
@@ -46,30 +48,18 @@
             </div>
 
             <p>
-                <label>If you were to be an animal, you'd be ... 
+                <label>If you were to be an animal, you'd be ... <br>
                 <select id="pickup_place" name="pickup_place">
                 <option value="" selected="selected">Select One</option>
-                <option value="office" >Taxi Office</option>
-                <option value="town_hall" >Town Hall</option>
-                <option value="telepathy" >We'll Guess!</option>
+                <option value="office" >Cat</option>
+                <option value="town_hall" >Dog</option>
+                <option value="telepathy" >Bird</option>
                 </select>
                 </label>
             </p>
 
             <p>
-                <label>Dropoff Place
-                <input type="text" name="dropoff_place" required list="destinations">
-                </label>
-
-                <datalist id="destinations">
-                <option value="Airport">
-                <option value="Beach">
-                <option value="Fred Flinstone's House">
-                </datalist>
-            </p>
-
-            <p>
-                <label>Special Instructions
+                <label>Extra information:<br>
                 <textarea name="comments" maxlength="500"></textarea>
                 </label>
             </p>
